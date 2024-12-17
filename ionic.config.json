@@ -1,0 +1,7 @@
+{
+  "name": "Desafío Chile Pasajes",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
