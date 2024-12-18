@@ -1,6 +1,30 @@
 :root {
-    --ion-color-primary: #0078d7;
-    --ion-color-secondary: #ffcc00;
-    --ion-color-light: #f4f4f4;
-    --ion-color-dark: #222;
+    --ion-color-primary: #FFD700; /* Amarillo brillante, "amarillo pato" */
+    --ion-color-primary-rgb: 255, 215, 0;
+    --ion-color-primary-contrast: #222; /* Contraste oscuro para buena legibilidad */
+    --ion-color-primary-contrast-rgb: 34, 34, 34;
+    --ion-color-primary-shade: #E6C200; /* Tonalidad más oscura del amarillo */
+    --ion-color-primary-tint: #FFDF33; /* Tonalidad más clara del amarillo */
+  
+    --ion-color-secondary: #0078d7; /* Azul complementario */
+    --ion-color-secondary-rgb: 0, 120, 215;
+    --ion-color-secondary-contrast: #fff; /* Contraste claro */
+    --ion-color-secondary-contrast-rgb: 255, 255, 255;
+    --ion-color-secondary-shade: #0065b3; /* Tonalidad más oscura del azul */
+    --ion-color-secondary-tint: #3393e6; /* Tonalidad más clara del azul */
+  
+    --ion-color-light: #f4f4f4; /* Color claro para fondo */
+    --ion-color-light-rgb: 244, 244, 244;
+    --ion-color-light-contrast: #222; /* Contraste oscuro */
+    --ion-color-light-contrast-rgb: 34, 34, 34;
+    --ion-color-light-shade: #dcdcdc; /* Tonalidad más oscura del color claro */
+    --ion-color-light-tint: #ffffff; /* Tonalidad más clara del color claro */
+  
+    --ion-color-dark: #222; /* Color oscuro para texto y contrastes */
+    --ion-color-dark-rgb: 34, 34, 34;
+    --ion-color-dark-contrast: #fff; /* Contraste claro */
+    --ion-color-dark-contrast-rgb: 255, 255, 255;
+    --ion-color-dark-shade: #1e1e1e; /* Tonalidad más oscura del color oscuro */
+    --ion-color-dark-tint: #2e2e2e; /* Tonalidad más clara del color oscuro */
   }
+  
