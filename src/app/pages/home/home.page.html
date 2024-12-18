@@ -1,0 +1,12 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title style="padding-left: 60px;">Inicio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button expand="block" (click)="loadRandomImage()">Ver imágen aleatoria</ion-button>
+  <div *ngIf="randomImage">
+    <ion-img [src]="randomImage" alt="Random Duck"></ion-img>
+  </div>
+</ion-content>

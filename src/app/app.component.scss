@@ -117,3 +117,10 @@ ion-note {
 ion-item.selected {
   --color: var(--ion-color-primary);
 }
+
+.menu-button-container {
+  position: fixed; 
+  top: 6px; 
+  left: 6px; 
+  z-index: 999; 
+}
