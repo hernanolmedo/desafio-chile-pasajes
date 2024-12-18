@@ -9,13 +9,23 @@ import { AppRoutingModule } from './app-routing.module';
 import { HomePageModule } from './pages/home/home.module';
 import { ListPageModule } from './pages/list/list.module';
 import { DetailPageModule } from './pages/detail/detail.module';
-import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
+import { LoadingInterceptor } from './core/interceptors/loading.interceptor';
 
 @NgModule({
   declarations: [AppComponent],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HomePageModule, ListPageModule, DetailPageModule],
   providers: [
-    provideHttpClient(withInterceptorsFromDi()) ,{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy,  }],
+    provideHttpClient(withInterceptorsFromDi()), 
+    { provide: RouteReuseStrategy, 
+      useClass: IonicRouteStrategy 
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: LoadingInterceptor,
+      multi: true,
+    }
+  ],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }
