@@ -1,5 +1,5 @@
 <ion-app>
-  <ion-split-pane contentId="main-content">
+  <ion-split-pane contentId="main-content" (ionSplitPaneVisible)="onSplitPaneVisible($event)">
     <ion-menu contentId="main-content" type="overlay"> 
       <ion-header>
         <ion-toolbar color="primary">
@@ -20,7 +20,7 @@
 
     <ion-router-outlet id="main-content"></ion-router-outlet>
 
-    <div class="menu-button-container"> 
+    <div class="menu-button-container" *ngIf="!isSplitPaneVisible"> 
       <ion-button (click)="openMenu()">☰</ion-button> 
     </div>
   </ion-split-pane>
