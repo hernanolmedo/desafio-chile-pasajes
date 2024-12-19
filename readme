@@ -1,0 +1,21 @@
+Para ejecutar este proyecto, necesitas tener instalado:
+
+- Node.js (v14.x o superior)
+- Ionic CLI
+
+Instalación
+
+1- Clonar repositorio
+   ```bash
+   git clone https://github.com/hernanolmedo/desafio-chile-pasajes.git
+   cd desafio-chile-pasajes
+
+2- Instalar las dependencias:
+
+    npm install
+
+3- Levantar el servidor de desarrollo:
+
+    ionic serve --proxy-config proxy.conf.json
+
+Esto iniciará el servidor de desarrollo y podrás ver la aplicación en tu navegador web en http://localhost:8100.
