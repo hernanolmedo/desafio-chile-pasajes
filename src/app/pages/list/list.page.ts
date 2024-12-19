@@ -8,7 +8,7 @@ import { ApiService } from 'src/app/core/services/duck.service';
   styleUrls: ['./list.page.scss'],
 })
 export class ListPage implements OnInit {
-  imageList: string[] = [];
+  imageList: any[] = [];
 
   constructor(private apiService: ApiService, private router: Router) { }
 
@@ -19,9 +19,20 @@ export class ListPage implements OnInit {
   loadImageList() {
     this.apiService.getImageList().subscribe({
       next: (data: any) => {
-        const images = data.images || [];
-        const gifs = data.gifs || [];
-        const httpImages = data.http?.map((img: string) => `http/${img}`) || []; 
+        const images = (data.images || []).map((img: string) => ({
+          name: img,
+          url: img
+        }));
+  
+        const gifs = (data.gifs || []).map((gif: string) => ({
+          name: gif,
+          url: gif
+        }));
+  
+        const httpImages = (data.http || []).map((httpImg: string) => ({
+          name: httpImg,
+          url: `http/${httpImg}`
+        }));
   
         this.imageList = [...images, ...gifs, ...httpImages];
       },
