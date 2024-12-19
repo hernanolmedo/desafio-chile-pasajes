@@ -13,7 +13,7 @@ export class LoadingService {
     if (!this.loading) {
       this.loading = await this.loadingController.create({
         message,
-        spinner: 'bubbles', // Puedes cambiar el estilo del spinner aquí
+        spinner: 'bubbles',
       });
       await this.loading.present();
     }

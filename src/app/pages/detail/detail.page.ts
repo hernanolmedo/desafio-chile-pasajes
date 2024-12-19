@@ -14,7 +14,6 @@ export class DetailPage implements OnInit {
   ngOnInit() {
     this.filename = this.route.snapshot.paramMap.get('filename');
     console.log('Filename received:', this.filename);
-    // Aquí puedes agregar código para cargar la imagen usando el filename
   }
 
   goBack() {
@@ -22,6 +21,6 @@ export class DetailPage implements OnInit {
   }
 
   navigate(url: string) {
-    window.open(url, '_blank'); // Abre la URL en una nueva pestaña
+    window.open(url, '_blank');
   }
 }

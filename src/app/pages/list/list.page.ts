@@ -16,16 +16,13 @@ export class ListPage implements OnInit {
     this.loadImageList();
   }
 
-  // Método para cargar la lista de imágenes
   loadImageList() {
     this.apiService.getImageList().subscribe({
       next: (data: any) => {
-        // Combinar imágenes, gifs y http en un solo arreglo
         const images = data.images || [];
         const gifs = data.gifs || [];
-        const httpImages = data.http || [];
+        const httpImages = data.http?.map((img: string) => `http/${img}`) || []; 
   
-        // Unir todas las listas en una sola
         this.imageList = [...images, ...gifs, ...httpImages];
       },
       error: (err) => {
@@ -33,10 +30,10 @@ export class ListPage implements OnInit {
       }
     });
   }
+  
 
   viewImage(image: string) {
     console.log('Imagen seleccionada:', image);
-    // Implementa la lógica para mostrar la imagen seleccionada
     this.router.navigate(['/detail', image]);
   }
 

@@ -14,7 +14,6 @@ export class HomePage implements OnInit {
   ngOnInit() {
   }
 
-  // Método para obtener una imagen aleatoria
   loadRandomImage() {
     this.apiService.getRandomImage().subscribe({
       next: (data: any) => {
